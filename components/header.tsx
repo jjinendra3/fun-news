@@ -36,36 +36,54 @@ export default function Header({ onNavigate }: HeaderProps) {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => onNavigate("world")}
-              className="text-gray-300 hover:text-primary font-medium transition-colors"
+              className="text-gray-300 hover:text-primary font-bold transition-colors"
             >
               World
             </button>
             <button
+              onClick={() => onNavigate("business")}
+              className="text-gray-300 hover:text-primary font-bold transition-colors"
+            >
+              Business
+            </button>
+            <button
               onClick={() => onNavigate("entertainment")}
-              className="text-gray-300 hover:text-primary font-medium transition-colors"
+              className="text-gray-300 hover:text-primary font-bold transition-colors"
             >
               Entertainment
             </button>
             <button
               onClick={() => onNavigate("sports")}
-              className="text-gray-300 hover:text-primary font-medium transition-colors"
+              className="text-gray-300 hover:text-primary font-bold transition-colors"
             >
               Sports
             </button>
             <button
+              onClick={() => onNavigate("science")}
+              className="text-gray-300 hover:text-primary font-bold transition-colors"
+            >
+              Science
+            </button>
+            <button
               onClick={() => onNavigate("tech")}
-              className="text-gray-300 hover:text-primary font-medium transition-colors"
+              className="text-gray-300 hover:text-primary font-bold transition-colors"
             >
               Tech
             </button>
             <button
               onClick={() => onNavigate("politics")}
-              className="text-gray-300 hover:text-primary font-medium transition-colors"
+              className="text-gray-300 hover:text-primary font-bold transition-colors"
             >
               Politics
+            </button>
+            <button
+              onClick={() => onNavigate("health")}
+              className="text-gray-300 hover:text-primary font-bold transition-colors"
+            >
+              Health
             </button>
           </nav>
 
@@ -107,40 +125,8 @@ export default function Header({ onNavigate }: HeaderProps) {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-gray-900 border-b border-gray-800">
-          <div className="container mx-auto px-4 py-3">
-            <nav className="flex flex-col space-y-3">
-              <button
-                onClick={() => handleNavigation("world")}
-                className="text-gray-300 hover:text-primary font-medium py-2 transition-colors text-left"
-              >
-                World
-              </button>
-              <button
-                onClick={() => handleNavigation("entertainment")}
-                className="text-gray-300 hover:text-primary font-medium py-2 transition-colors text-left"
-              >
-                Entertainment
-              </button>
-              <button
-                onClick={() => handleNavigation("sports")}
-                className="text-gray-300 hover:text-primary font-medium py-2 transition-colors text-left"
-              >
-                Sports
-              </button>
-              <button
-                onClick={() => handleNavigation("tech")}
-                className="text-gray-300 hover:text-primary font-medium py-2 transition-colors text-left"
-              >
-                Tech
-              </button>
-              <button
-                onClick={() => handleNavigation("politics")}
-                className="text-gray-300 hover:text-primary font-medium py-2 transition-colors text-left"
-              >
-                Politics
-              </button>
-            </nav>
-            <div className="flex items-center space-x-4 mt-4 pt-4 border-t border-gray-800">
+          <div className="container flex flex-row items-center justify-center px-4 py-3">
+            <div className="flex items-center space-x-4 border-gray-800">
               <Button variant="ghost" size="icon" className="text-gray-300 hover:text-primary">
                 <Search className="h-5 w-5" />
               </Button>

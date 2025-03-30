@@ -8,7 +8,6 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "FunNews - Vibrant & Playful News Website",
   description: "A dynamic, fun-themed news website with vibrant design and interactive elements",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({

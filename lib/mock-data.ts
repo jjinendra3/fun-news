@@ -3,20 +3,6 @@ import type { Article } from "./types";
 export const mockArticles: Article[] = [
   {
     id: "1",
-    title: "Global Climate Summit Reaches Historic Agreement on Emissions",
-    excerpt:
-      "World leaders have reached a landmark agreement to reduce carbon emissions by 50% by 2030.",
-    content:
-      "In a historic move, world leaders from over 190 countries have reached a landmark agreement at the Global Climate Summit to reduce carbon emissions by 50% by 2030. The agreement, which comes after two weeks of intense negotiations, is being hailed as a major breakthrough in the fight against climate change. The deal includes commitments from both developed and developing nations, with financial support mechanisms for countries that need assistance in transitioning to cleaner energy sources.",
-    author: "Jane Smith",
-    date: "March 15, 2023",
-    category: "world",
-    image:
-      "https://www.consilium.europa.eu/media/68475/5f8a479d-e3e7-45a4-a014-2f837f786c03_.jpg",
-    featured: true,
-  },
-  {
-    id: "2",
     title: "Tech Giant Unveils Revolutionary AI Assistant That Can Write Code",
     excerpt:
       "The new AI system can generate complex applications from simple natural language descriptions.",
@@ -29,6 +15,21 @@ export const mockArticles: Article[] = [
       "https://img-cdn.inc.com/image/upload/f_webp,c_fit,w_1920,q_auto/images/panoramic/sam-altman-ai-inc_536595_s6eifk.jpg",
     featured: true,
   },
+  {
+    id: "2",
+    title: "Global Climate Summit Reaches Historic Agreement on Emissions",
+    excerpt:
+      "World leaders have reached a landmark agreement to reduce carbon emissions by 50% by 2030.",
+    content:
+      "In a historic move, world leaders from over 190 countries have reached a landmark agreement at the Global Climate Summit to reduce carbon emissions by 50% by 2030. The agreement, which comes after two weeks of intense negotiations, is being hailed as a major breakthrough in the fight against climate change. The deal includes commitments from both developed and developing nations, with financial support mechanisms for countries that need assistance in transitioning to cleaner energy sources.",
+    author: "Jane Smith",
+    date: "March 15, 2023",
+    category: "world",
+    image:
+      "https://www.consilium.europa.eu/media/68475/5f8a479d-e3e7-45a4-a014-2f837f786c03_.jpg",
+    featured: true,
+  },
+
   {
     id: "3",
     title: "Olympic Gold Medalist Breaks World Record in Spectacular Fashion",

@@ -72,25 +72,31 @@ export default function Home() {
   }, [selectedCategory, searchQuery, articles]);
 
   const handleCategoryChange = (category: string) => {
-    // setSelectedCategory(category);
+    const offset = 150; // adjust as needed for your fixed header or spacing
+    // Map categories to their refs
+    const categoryRefs: Record<
+      string,
+      React.RefObject<HTMLDivElement | null>
+    > = {
+      world: worldRef,
+      entertainment: entertainmentRef,
+      sports: sportsRef,
+      tech: techRef,
+      politics: politicsRef,
+      health: healthRef,
+      science: scienceRef,
+      business: businessRef,
+    };
 
-    // Scroll to appropriate section based on category
-    if (category === "world" && worldRef.current) {
-      worldRef.current.scrollIntoView({ behavior: "smooth" });
-    } else if (category === "entertainment" && entertainmentRef.current) {
-      entertainmentRef.current.scrollIntoView({ behavior: "smooth" });
-    } else if (category === "sports" && sportsRef.current) {
-      sportsRef.current.scrollIntoView({ behavior: "smooth" });
-    } else if (category === "tech" && techRef.current) {
-      techRef.current.scrollIntoView({ behavior: "smooth" });
-    } else if (category === "politics" && politicsRef.current) {
-      politicsRef.current.scrollIntoView({ behavior: "smooth" });
-    } else if (category === "health" && healthRef.current) {
-      healthRef.current.scrollIntoView({ behavior: "smooth" });
-    } else if (category === "science" && scienceRef.current) {
-      scienceRef.current.scrollIntoView({ behavior: "smooth" });
-    } else if (category === "business" && businessRef.current) {
-      businessRef.current.scrollIntoView({ behavior: "smooth" });
+    const ref = categoryRefs[category];
+
+    if (ref && ref.current) {
+      const elementTop = ref.current.getBoundingClientRect().top;
+      const targetPosition = elementTop + window.pageYOffset - offset;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      });
     }
   };
 
@@ -113,11 +119,20 @@ export default function Home() {
       sports: sportsRef,
       tech: techRef,
       politics: politicsRef,
+      health: healthRef,
+      business: businessRef,
+      science: scienceRef,
     };
 
     const ref = sectionMap[sectionId];
     if (ref && ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth" });
+      const offset = 150; // Adjust this value as needed
+      const elementTop = ref.current.getBoundingClientRect().top;
+      const targetPosition = elementTop + window.pageYOffset - offset;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      });
       // setSelectedCategory(sectionId);
     }
   };
@@ -135,10 +150,11 @@ export default function Home() {
     <div className="min-h-screen bg-gray-900 text-gray-100">
       <Header onNavigate={scrollToSection} />
       <main className="container mx-auto px-4 pt-6 pb-20">
+        <TrendingTopics />
+
         <HeroSection
           articles={articles.filter((article) => article.featured)}
         />
-        <TrendingTopics />
         <div className="my-8 flex flex-col md:flex-row gap-4 items-start">
           <div className="w-full md:w-3/4">
             <CategoryTabs

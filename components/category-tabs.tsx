@@ -25,7 +25,7 @@ export default function CategoryTabs({
   onCategoryChange,
 }: CategoryTabsProps) {
   return (
-    <div className="mb-6 overflow-x-auto scrollbar-hide">
+    <div className="mb-6 overflow-x-auto scrollbar-hide md:hidden block">
       <div className="flex space-x-2 pb-2">
         {categories.map((category) => (
           <button

@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Instagram, Youtube } from "lucide-react"
+import { Linkedin, Github } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -9,20 +9,24 @@ export default function Footer() {
             <h3 className="text-2xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500">
               FunNews
             </h3>
-            <p className="text-gray-400 mb-4">Your source for vibrant, playful, and modern news coverage.</p>
+            <p className="text-gray-400 mb-4">
+              Your source for vibrant, playful, and modern news coverage.
+            </p>
             <div className="flex space-x-4">
-              <button className="text-gray-400 hover:text-primary transition-colors">
-                <Facebook className="h-5 w-5" />
-              </button>
-              <button className="text-gray-400 hover:text-primary transition-colors">
-                <Twitter className="h-5 w-5" />
-              </button>
-              <button className="text-gray-400 hover:text-primary transition-colors">
-                <Instagram className="h-5 w-5" />
-              </button>
-              <button className="text-gray-400 hover:text-primary transition-colors">
-                <Youtube className="h-5 w-5" />
-              </button>
+              <a
+                href="https://linkedin.com/in/jjinendra3"
+                target="_blank"
+                className="text-gray-400 hover:text-primary transition-colors"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a
+                href="https://github.com/jjinendra3"
+                target="_blank"
+                className="text-gray-400 hover:text-primary transition-colors"
+              >
+                <Github className="h-5 w-5" />
+              </a>
             </div>
           </div>
 
@@ -30,19 +34,29 @@ export default function Footer() {
             <h4 className="font-bold text-lg mb-4">Categories</h4>
             <ul className="space-y-2">
               <li>
-                <button className="text-gray-400 hover:text-primary transition-colors">World</button>
+                <button className="text-gray-400 hover:text-primary transition-colors">
+                  World
+                </button>
               </li>
               <li>
-                <button className="text-gray-400 hover:text-primary transition-colors">Politics</button>
+                <button className="text-gray-400 hover:text-primary transition-colors">
+                  Politics
+                </button>
               </li>
               <li>
-                <button className="text-gray-400 hover:text-primary transition-colors">Business</button>
+                <button className="text-gray-400 hover:text-primary transition-colors">
+                  Business
+                </button>
               </li>
               <li>
-                <button className="text-gray-400 hover:text-primary transition-colors">Tech</button>
+                <button className="text-gray-400 hover:text-primary transition-colors">
+                  Tech
+                </button>
               </li>
               <li>
-                <button className="text-gray-400 hover:text-primary transition-colors">Entertainment</button>
+                <button className="text-gray-400 hover:text-primary transition-colors">
+                  Entertainment
+                </button>
               </li>
             </ul>
           </div>
@@ -51,26 +65,38 @@ export default function Footer() {
             <h4 className="font-bold text-lg mb-4">Company</h4>
             <ul className="space-y-2">
               <li>
-                <button className="text-gray-400 hover:text-primary transition-colors">About Us</button>
+                <button className="text-gray-400 hover:text-primary transition-colors">
+                  About Us
+                </button>
               </li>
               <li>
-                <button className="text-gray-400 hover:text-primary transition-colors">Careers</button>
+                <button className="text-gray-400 hover:text-primary transition-colors">
+                  Careers
+                </button>
               </li>
               <li>
-                <button className="text-gray-400 hover:text-primary transition-colors">Privacy Policy</button>
+                <button className="text-gray-400 hover:text-primary transition-colors">
+                  Privacy Policy
+                </button>
               </li>
               <li>
-                <button className="text-gray-400 hover:text-primary transition-colors">Terms of Service</button>
+                <button className="text-gray-400 hover:text-primary transition-colors">
+                  Terms of Service
+                </button>
               </li>
               <li>
-                <button className="text-gray-400 hover:text-primary transition-colors">Contact Us</button>
+                <button className="text-gray-400 hover:text-primary transition-colors">
+                  Contact Us
+                </button>
               </li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold text-lg mb-4">Subscribe</h4>
-            <p className="text-gray-400 mb-4">Get the latest news delivered to your inbox.</p>
+            <p className="text-gray-400 mb-4">
+              Get the latest news delivered to your inbox.
+            </p>
             <form className="space-y-2">
               <input
                 type="email"
@@ -92,6 +118,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
-
